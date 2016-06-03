@@ -1,2 +1,2 @@
-# blog
-Notes taken on the go around programming industry
+Here goes personal notes taken on the go around programming/processes/managment
+
