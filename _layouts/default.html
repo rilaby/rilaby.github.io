@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"
+  itemscope="" itemtype="http://schema.org/WebPage">
+  <head>
+    <base href="{{ site.url }}{{ page.url }}"/>
+    <meta charset="utf-8"/>
+    <meta itemprop="name" content="{{ page.title }}" />
+    <meta itemprop="author" content="{{ site.author.name }}" />
+    <!-- <meta itemprop="breadcrumb" content="{{ site.url }}" /> -->
+    <!-- <meta itemprop="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" /> -->
+    <!-- <meta itemprop="description" content="{{ page | description }}" /> -->
+    <!-- <meta name="description" content="{{ page | description }} -->
+      <!-- {% if paginator.page > 1 %} -->
+        <!-- (page {{ paginator.page }}) -->
+      <!-- {% endif %}" /> -->
+    <!-- <meta name="keywords" content="{{ page | keywords | join:', ' | xml_escape }}" /> -->
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+    
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+  </head>
   <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="face">
+          <a href="/me.html">
+            <img src="/images/avatar-192x256.png" class="photo"
+              alt="photo of Uladzimir Karabeinik"/>
+          </a>
+        </div>
+        <nav>
+          <ul class="menu social notranslate">
+            <li><a href="https://www.linkedin.com/in/karabeinik" title="my LinkedIn profile"><i class="icon icon-linkedin notranslate" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:uladzimir.karabeinik@gmail.com" title="mailto:uladzimir.karabeinik@gmail.com"><i class="icon icon-mail notranslate" aria-hidden="true"></i></a></li>
+          </ul>
+          <ul class="menu">
+            <li><a href="/" title="home page">home</a></li>
+            <li><a href="/contents.html" title="blog contents">all&#160;{{ site.posts.size }} posts</a></li>
+            <li><a href="/me.html" title="about me">about me</a></li>
+          </ul>
+        </nav>
+        </div>
+      </header>
     </div>
-
-    {% include footer.html %}
-
+    {{ content }}
   </body>
-
 </html>

@@ -1,6 +1,8 @@
 name: rilaby.me
-url: "http://www.rilaby.me"
+# url: "http://www.rilaby.me"
+url: http://localhost:4000
 title: "Uladzimir Karabeinik"
+
 author:
   name: Uladzimir Karabeinik
   email: uladzimir.karabeinik@gmail.com
@@ -21,3 +23,7 @@ encoding: utf-8
 timezone: Europe/Minsk
 
 markdown: kramdown
+
+sass:
+  sass_dir: _sass
+  style: compresed
